@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\bin\Debug\net6.0\Mangatheque.Core.Interfaces.deps.json
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\bin\Debug\net6.0\Mangatheque.Core.Interfaces.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\bin\Debug\net6.0\Mangatheque.Core.Interfaces.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\bin\Debug\net6.0\Mangatheque.Core.Models.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\bin\Debug\net6.0\Mangatheque.Core.Models.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.AssemblyInfo.cs
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.csproj.CopyComplete
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\refint\Mangatheque.Core.Interfaces.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\Mangatheque.Core.Interfaces.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Interfaces\obj\Debug\net6.0\ref\Mangatheque.Core.Interfaces.dll
