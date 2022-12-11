@@ -29,7 +29,7 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
 
         public List<Manga> GetList()
         {
-            var Query = from item in this.context?.Mangas
+            var Query = from item in this.context?.Mangas.Include(item=>item.stock)
                                             select item;
 
             return Query.ToList();
@@ -37,7 +37,7 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
 
         public Manga? GetOne(int Id)
         {
-            return this.context?.Mangas
+            return this.context?.Mangas.Include(item=>item.stock)
                     .First(item => item.Id == Id);
         }
         #endregion

@@ -21,6 +21,7 @@ namespace Mangatheque.Core.Models
 
         public byte[]? Couverture { get; set; }
 
-       // public Stock stock { get; set; } = Stock.Valid;
+        public Stock stock { get; set; } = Stock.Valid;
+
     }
 }

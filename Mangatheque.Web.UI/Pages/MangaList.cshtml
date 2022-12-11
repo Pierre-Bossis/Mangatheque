@@ -25,8 +25,19 @@
                     <br />
 
                     <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid"><br /><br />
-                    Date de publication : @item.DatePublication.ToString("dd MMM yyyy")
-                     dispo / indispo
+                    Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br/>
+                    @if (item.stock.Id == 1)
+                    {
+                        <span style="color:lawngreen">@item.stock.Label</span>
+                    }
+                    else if(item.stock.Id == 0)
+                    {
+                        <span style="color:cornflowerblue"><i>@item.stock.Label</i></span>
+                    }
+                    else
+                    {
+                        <span style="color:red">@item.stock.Label</span>
+                    }
                 </div>
             </div>
         }
