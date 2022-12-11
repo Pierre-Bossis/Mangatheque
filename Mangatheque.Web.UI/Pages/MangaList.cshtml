@@ -25,18 +25,29 @@
                     <br />
 
                     <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid"><br /><br />
-                    Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br/>
+                    Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />
                     @if (item.stock.Id == 1)
                     {
-                        <span style="color:lawngreen">@item.stock.Label</span>
+                        <span style="color:lawngreen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-
+                            .02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg> @item.stock.Label
+                        </span>
                     }
-                    else if(item.stock.Id == 0)
+                    else if (item.stock.Id == 0)
                     {
-                        <span style="color:cornflowerblue"><i>@item.stock.Label</i></span>
+                        <span style="color:cornflowerblue"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/></svg> 
+                        <i>@item.stock.Label</i></span>
                     }
                     else
                     {
-                        <span style="color:red">@item.stock.Label</span>
+                        <span style="color:red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-reverse-fill" viewBox="0 0 16 16">
+                        <path d="M0 3a2 2 0 0 1 2-2h7.08a2 2 0 0 1 1.519.698l4.843 5.651a1 1 0 0 1 0 1.302L10.6 14.3a2 2 0 0 1-1.52.7H2a2 2 0 0 1-2-2V3zm9.854 2.854a.5.5 0 0 0-.708-.708L7 7.293
+                        4.854 5.146a.5.5 0 1 0-.708.708L6.293 8l-2.147 2.146a.5.5 0 0 0 .708.708L7 8.707l2.146 2.147a.5.5 0 0 0 .708-.708L7.707 8l2.147-2.146z"/></svg>
+                            @item.stock.Label</span>
                     }
                 </div>
             </div>

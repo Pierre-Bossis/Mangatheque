@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/source/repos/Mangatheque/Mangatheque.Web.UI/Pages/AddOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkT25lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/Mangatheque/Mangatheque.Web.UI/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

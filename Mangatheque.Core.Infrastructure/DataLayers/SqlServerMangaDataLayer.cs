@@ -24,7 +24,12 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
         #region Public Methods
         public void AddOne(Manga manga)
         {
-            throw new NotImplementedException();
+            this.context?.Mangas.Add(manga);
+
+            var entry = this.context?.Entry(manga.stock);
+            entry.State = Microsoft.EntityFrameworkCore.EntityState.Unchanged;
+
+            this.context?.SaveChanges();
         }
 
         public List<Manga> GetList()

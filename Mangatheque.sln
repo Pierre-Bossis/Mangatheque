@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{DC4BA70C-5892-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{8F230977-F452-456B-99F0-3A9B7B10C639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangatheque.Core.Application", "Mangatheque.Core.Application\Mangatheque.Core.Application.csproj", "{C382C4C9-0ABA-4E56-88D6-92C939BF1E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangatheque.Core.Application", "Mangatheque.Core.Application\Mangatheque.Core.Application.csproj", "{C382C4C9-0ABA-4E56-88D6-92C939BF1E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangatheque.Core.Infrastructure", "Mangatheque.Core.Infrastructure\Mangatheque.Core.Infrastructure.csproj", "{BEB722C9-52C7-4537-A53D-F700E392F6FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangatheque.Core.Infrastructure", "Mangatheque.Core.Infrastructure\Mangatheque.Core.Infrastructure.csproj", "{BEB722C9-52C7-4537-A53D-F700E392F6FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangatheque.Core.Interfaces", "Mangatheque.Core.Interfaces\Mangatheque.Core.Interfaces.csproj", "{A342B710-0BA6-4CCE-8D3F-F6BE1A685B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangatheque.Core.Interfaces", "Mangatheque.Core.Interfaces\Mangatheque.Core.Interfaces.csproj", "{A342B710-0BA6-4CCE-8D3F-F6BE1A685B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangatheque.Core.Models", "Mangatheque.Core.Models\Mangatheque.Core.Models.csproj", "{37CC2B6C-571E-49C2-8D3F-C4254DC4A374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mangatheque.Core.Models", "Mangatheque.Core.Models\Mangatheque.Core.Models.csproj", "{37CC2B6C-571E-49C2-8D3F-C4254DC4A374}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
