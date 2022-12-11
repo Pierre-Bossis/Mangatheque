@@ -54,7 +54,7 @@ h6 {
     letter-spacing: 0;
     font-weight: normal;
     padding: 0 0 10px 0;
-    padding-top:50px;
+    padding-top:0px; /*50*/
     font-weight: normal;
     line-height: normal;
     color: #111111;
@@ -215,7 +215,7 @@ button {
     width: 100%;
     float: left;
     background-image: url(/images/Manga-Banner.jpg);
-    height: 320px;
+    height: 260px; /*320*/
     background-size: 100%;
     background-repeat: no-repeat;
     position: fixed; /* à retirer si pas beau */
