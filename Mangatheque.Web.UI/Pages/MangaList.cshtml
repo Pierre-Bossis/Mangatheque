@@ -15,15 +15,15 @@
     <div class="row">
         @foreach (var item in Model.Mangas)
         {
-            <div class="col-lg-4 col-sm-4">
-                <a asp-page="MangaDetail" asp-route-nom&tome="@item.Nom+@item.Numero">
+            <div class="col-lg-3 col-sm-4">
+                <a asp-page="MangaDetail" asp-route-id="@item.Id">
                 <div class="box_main">
                     <h1>@item.Nom tome @item.Numero</h1>
-                    Auteur : @item.Auteur<br />
-                    Genre : @item.Genre
+                        <!--Auteur : @item.Auteur<br />-->
+                        <!--Genre : @item.Genre-->
                     <br />
                     <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid"><br /><br />
-                    Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />
+                        <!--Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />-->
                     @if (item.stock.Id == 1)
                     {
                         <span style="color:lawngreen">
