@@ -218,7 +218,8 @@ button {
     height: 320px;
     background-size: 100%;
     background-repeat: no-repeat;
-    position:fixed; /* à retirer si pas beau */
+    position: fixed; /* à retirer si pas beau */
+    z-index: 1;
 }
 
 

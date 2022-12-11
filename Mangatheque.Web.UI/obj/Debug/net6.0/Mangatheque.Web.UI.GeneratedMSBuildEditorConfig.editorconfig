@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/source/repos/Mangatheque/Mangatheque.Web.UI/Pages/MangaDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuZ2FEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/Mangatheque/Mangatheque.Web.UI/Pages/MangaList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuZ2FMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

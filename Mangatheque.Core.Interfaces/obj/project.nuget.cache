@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NihhOS/Yjfy13MPxeEMkyAmOag3SANq+GSNg8hVd71typzyXBmulLaZzi97wMuOHTBw5Rljd087DC/y2ad5jzw==",
+  "dgSpecHash": "m6nhrqf4JMvugpFzO0BJ9Nmf0S1DSpYtgraTl1ic+1WymiPqfy0G5uBnxCGCp+PFxMM7smS6xiDo71LCIH2nqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\Mangatheque\\Mangatheque.Core.Interfaces\\Mangatheque.Core.Interfaces.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
