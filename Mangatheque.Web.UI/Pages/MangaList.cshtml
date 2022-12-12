@@ -12,17 +12,18 @@
 }
 <h1>Liste des mangas</h1>
 <div class="fashion_section_2">
-    <div class="row">
+    <div class="row" style="  display: flex;
+  flex-wrap: wrap;">
         @foreach (var item in Model.Mangas)
         {
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-3 margin-MangaList">
                 <a asp-page="MangaDetail" asp-route-id="@item.Id">
-                <div class="box_main">
+                <div class="box_main content-mangaList">
                     <h1>@item.Nom tome @item.Numero</h1>
                         <!--Auteur : @item.Auteur<br />-->
                         <!--Genre : @item.Genre-->
                     <br />
-                    <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid"><br /><br />
+                    <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid" style="max-height:300px;" ><br /><br />
                         <!--Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />-->
                     @if (item.stock.Id == 1)
                     {

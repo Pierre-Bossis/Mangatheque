@@ -955,6 +955,7 @@ input.mail_bt::placeholder {
 .copyright_text a:hover {
     color: #f26522;
 }
+/* copyright section end */
 
 .margin_top90 {
     margin-top: 90px;
@@ -965,6 +966,19 @@ input.mail_bt::placeholder {
     margin-bottom: 15%;
     text-align: center !important;
 }
+/*
+.pb-3 {
+    padding-bottom: 1rem !important;
+    max-width:1000px;
+}
+    */
 
+.content-mangaList {
+    height: 100%;
+    padding: 20px 20px 10px;
+    color: #fff;
+}
 
-/* copyright section end */
+.margin-MangaList {
+    margin-bottom: 30px;
+}

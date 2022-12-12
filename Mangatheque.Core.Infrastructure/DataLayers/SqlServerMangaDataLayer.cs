@@ -34,7 +34,7 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
 
         public List<Manga> GetList()
         {
-            var Query = from item in this.context?.Mangas.Include(item=>item.stock)
+            var Query = from item in this.context?.Mangas.Include(item=>item.stock).Where(item=>item.Numero == 1)
                                             select item;
 
             return Query.ToList();
