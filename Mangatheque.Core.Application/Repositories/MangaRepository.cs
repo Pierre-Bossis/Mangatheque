@@ -29,6 +29,13 @@ namespace Mangatheque.Core.Application.Repositories
             return list;
         }
 
+        public List<Manga> GetAllT1()
+        {
+            List<Manga> list = this.DataLayer.GetListT1();
+
+            return list;
+        }
+
         public Manga GetOne(int Id)
         {
             Manga manga = this.DataLayer.GetOne(Id);

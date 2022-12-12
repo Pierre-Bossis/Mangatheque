@@ -17,6 +17,12 @@ namespace Mangatheque.Core.Interfaces.Infrastructures
         /// </summary>
         /// <returns></returns>
         List<Manga> GetList();
+        
+        /// <summary>
+        /// Retourne la liste des tome 1
+        /// </summary>
+        /// <returns></returns>
+        List<Manga> GetListT1();
 
         /// <summary>
         /// Appelle la base pour retourner un Manga.

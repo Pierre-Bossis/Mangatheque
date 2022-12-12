@@ -12,6 +12,12 @@ namespace Mangatheque.Core.Interfaces.Repositories
         List<Manga> GetAll();
 
         /// <summary>
+        /// retourne la liste des manga Tome 1
+        /// </summary>
+        /// <returns></returns>
+        List<Manga> GetAllT1();
+
+        /// <summary>
         /// retourne un Manga par son Id.
         /// </summary>
         /// <param name="Id"></param>
