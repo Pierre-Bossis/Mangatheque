@@ -26,9 +26,6 @@ namespace Mangatheque.Web.UI.Pages
         {
             IActionResult result = this.Page();
 
-            
-
-
             if (this.ModelState.IsValid)
             {
                 manga.Couverture = ConvertToBytes(myFile);
@@ -38,7 +35,7 @@ namespace Mangatheque.Web.UI.Pages
 
                 this.ModelState.Clear();
 
-                result = this.RedirectToPage("/MangaList");
+                result = this.RedirectToPage("/AllT1MangaList");
             }
             return result;
         }

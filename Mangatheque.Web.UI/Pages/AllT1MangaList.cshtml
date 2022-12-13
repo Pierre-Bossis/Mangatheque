@@ -1,4 +1,4 @@
-﻿@page "/oui"
+﻿@page "/Liste-Manga"
 @model Mangatheque.Web.UI.Pages.AllT1MangaListModel
 @{
     ViewData["Title"] = "Liste Manga";
@@ -17,7 +17,7 @@
         @foreach (var item in Model.Mangas)
         {
                 <div class="col-lg-3 margin-MangaList">
-                    <a asp-page="MangaList" asp-route-id="@item.Id">
+                    <a asp-page="MangaList" asp-route-nom="@item.Nom">
                     <div class="box_main content-mangaList">
                         <h1>@item.Nom</h1>
                             <!--Auteur : @item.Auteur<br />-->

@@ -9,7 +9,7 @@ namespace Mangatheque.Core.Interfaces.Repositories
 {
     public interface IMangaRepository
     {
-        List<Manga> GetAll();
+        List<Manga> GetAll(string nom);
 
         /// <summary>
         /// retourne la liste des manga Tome 1

@@ -22,9 +22,9 @@ namespace Mangatheque.Core.Application.Repositories
         }
         #endregion
         #region public methods
-        public List<Manga> GetAll()
+        public List<Manga> GetAll(string nom)
         {
-            List<Manga> list = this.DataLayer.GetList();
+            List<Manga> list = this.DataLayer.GetList(nom);
 
             return list;
         }

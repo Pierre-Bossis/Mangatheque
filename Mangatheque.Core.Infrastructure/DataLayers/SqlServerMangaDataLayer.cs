@@ -32,9 +32,9 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
             this.context?.SaveChanges();
         }
 
-        public List<Manga> GetList()
+        public List<Manga> GetList(string nom)
         {
-            var Query = from item in this.context?.Mangas.Include(item => item.stock)
+            var Query = from item in this.context?.Mangas.Include(item => item.stock).Where(c => c.Nom == nom)
                         select item;
 
             return Query.ToList();
