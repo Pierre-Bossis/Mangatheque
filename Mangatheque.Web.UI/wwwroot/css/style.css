@@ -199,10 +199,10 @@ button {
     width: 100%;
 }
 
-.layout_padding {
+/*.layout_padding {
     padding-top: 90px;
     padding-bottom: 0px;
-}
+}*/
 
 .padding_0 {
     padding: 0px;
@@ -482,7 +482,7 @@ a:hover {
 .banner_section {
     width: 100%;
     float: left;
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
 }
 
 .banner_taital {
