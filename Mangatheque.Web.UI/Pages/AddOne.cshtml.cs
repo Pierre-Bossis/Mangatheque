@@ -1,11 +1,13 @@
 using Mangatheque.Core.Interfaces.Repositories;
 using Mangatheque.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
 
 namespace Mangatheque.Web.UI.Pages
 {
+    [Authorize]
     public class AddOneModel : PageModel
     {
         #region Fields

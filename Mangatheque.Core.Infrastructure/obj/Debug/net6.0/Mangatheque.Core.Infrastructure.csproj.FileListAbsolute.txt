@@ -15,3 +15,5 @@ C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\obj\Debug
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\obj\Debug\net6.0\ref\Mangatheque.Core.Infrastructure.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\bin\Debug\net6.0\Mangatheque.Core.Interfaces.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\bin\Debug\net6.0\Mangatheque.Core.Interfaces.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\bin\Debug\net6.0\Mangatheque.Core.Infrastructure.runtimeconfig.json
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Infrastructure\obj\Debug\net6.0\Mangatheque.Core.Infrastructure.genruntimeconfig.cache

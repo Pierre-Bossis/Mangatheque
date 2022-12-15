@@ -15,7 +15,7 @@ namespace Mangatheque.Core.Infrastructure.Databases
         #endregion
 
         #region Constructors
-        public MangaDbContext(DbContextOptions options) : base(options)
+        public MangaDbContext(DbContextOptions<MangaDbContext> options) : base(options)
         {
             
         }

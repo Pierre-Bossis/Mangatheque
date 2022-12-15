@@ -987,3 +987,14 @@ input.mail_bt::placeholder {
     margin-bottom:10px;
 }
     */
+
+button#logout.nav-link.btn.btn-link {
+    font-weight: 400;
+    color: #fd7e14;
+    background-color: transparent;
+}
+button#logout.nav-link.btn.btn-link:hover {
+    font-weight: 400;
+    color:red;
+    background-color: transparent;
+}

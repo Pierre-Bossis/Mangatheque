@@ -4,6 +4,10 @@ using Mangatheque.Core.Infrastructure.DataLayers;
 using Mangatheque.Core.Interfaces.Infrastructures;
 using Mangatheque.Core.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+//using Mangatheque.Web.UI.Data;
+//using Mangatheque.Web.UI.Areas.Identity.Data;
+using Mangatheque.Core.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +20,10 @@ builder.Services.AddDbContext<MangaDbContext>(options =>
 {
     options.UseSqlServer(connectionstring);
 });
+
+builder.Services.AddDefaultIdentity<MangathequeWebUIUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<MangathequeWebUIContext>();
+builder.Services.AddDbContext<MangathequeWebUIContext>(options=>options.UseSqlServer(connectionstring));
 
 builder.Services.AddScoped<IMangaDataLayer, SqlServerMangaDataLayer>();
 builder.Services.AddScoped<IMangaRepository, MangaRepository>();
@@ -35,7 +43,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+//app.UseSession();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 
