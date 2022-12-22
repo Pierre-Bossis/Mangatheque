@@ -297,3 +297,7 @@ C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Micro
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\obj\Debug\net6.0\Mangatheque.Web.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\SendGrid.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Mangatheque.Core.Services.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Mangatheque.Core.Services.pdb

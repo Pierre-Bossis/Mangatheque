@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Mangatheque.Core.Infrastructure\Mangatheque.Core.Infrastructure.csproj" />
     <ProjectReference Include="..\Mangatheque.Core.Interfaces\Mangatheque.Core.Interfaces.csproj" />
     <ProjectReference Include="..\Mangatheque.Core.Models\Mangatheque.Core.Models.csproj" />
+    <ProjectReference Include="..\Mangatheque.Core.Services\Mangatheque.Core.Services.csproj" />
   </ItemGroup>
 
 </Project>

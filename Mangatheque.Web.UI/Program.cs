@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Identity;
 //using Mangatheque.Web.UI.Data;
 //using Mangatheque.Web.UI.Areas.Identity.Data;
 using Mangatheque.Core.Infrastructure;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Mangatheque.Core.Services;
+using Mangatheque.Core.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +31,8 @@ builder.Services.AddDbContext<MangathequeWebUIContext>(options=>options.UseSqlSe
 builder.Services.AddScoped<IMangaDataLayer, SqlServerMangaDataLayer>();
 builder.Services.AddScoped<IMangaRepository, MangaRepository>();
 
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
 
 
 var app = builder.Build();
