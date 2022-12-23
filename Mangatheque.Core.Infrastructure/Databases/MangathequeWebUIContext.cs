@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mangatheque.Core.Infrastructure.Databases;
 
-public class MangathequeWebUIContext : IdentityDbContext<MangathequeWebUIUser>
+public class MangathequeWebUIContext : IdentityDbContext<MangathequeWebUIUser,IdentityRole,string>
 {
     public MangathequeWebUIContext(DbContextOptions<MangathequeWebUIContext> options)
         : base(options)

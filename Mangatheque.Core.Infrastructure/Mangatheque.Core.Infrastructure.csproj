@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Mangatheque.Core.Models\Mangatheque.Core.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Manager\" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Mangatheque.Web.UI.Pages
 {
-    [Authorize]
+    [Authorize(Roles ="Administrator")]
     public class AddOneModel : PageModel
     {
         #region Fields

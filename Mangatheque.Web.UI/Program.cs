@@ -24,9 +24,16 @@ builder.Services.AddDbContext<MangaDbContext>(options =>
     options.UseSqlServer(connectionstring);
 });
 
-builder.Services.AddDefaultIdentity<MangathequeWebUIUser>(options => options.SignIn.RequireConfirmedAccount = true)
+
+
+builder.Services.AddIdentity<MangathequeWebUIUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoleManager<RoleManager<IdentityRole>>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<MangathequeWebUIContext>();
 builder.Services.AddDbContext<MangathequeWebUIContext>(options=>options.UseSqlServer(connectionstring));
+
+
 
 builder.Services.AddScoped<IMangaDataLayer, SqlServerMangaDataLayer>();
 builder.Services.AddScoped<IMangaRepository, MangaRepository>();

@@ -40,7 +40,7 @@ namespace Mangatheque.Core.Services.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("pierre200501@live.fr", "Confirm Mail"),
+                From = new EmailAddress("pierre200501@live.fr", "Mangatheque - Confirm Mail"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
