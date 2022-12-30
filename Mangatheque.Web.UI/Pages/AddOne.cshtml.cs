@@ -18,7 +18,6 @@ namespace Mangatheque.Web.UI.Pages
         public AddOneModel(IMangaRepository repository)
         {
             this.repository = repository;
-
         }
         public void OnGet()
         {

@@ -35,6 +35,7 @@ namespace Mangatheque.Core.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("Couverture")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<DateTime>("DatePublication")

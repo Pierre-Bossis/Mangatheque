@@ -301,3 +301,4 @@ C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\SendG
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\StarkbankEcdsa.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Mangatheque.Core.Services.dll
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Mangatheque.Core.Services.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

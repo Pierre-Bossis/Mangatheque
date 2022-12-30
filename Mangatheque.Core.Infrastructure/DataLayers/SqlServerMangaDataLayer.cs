@@ -13,7 +13,7 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
     public class SqlServerMangaDataLayer : IMangaDataLayer
     {
         #region Fields
-        private readonly MangaDbContext? context = null;
+        private readonly MangaDbContext context;
         #endregion
         #region Constructors
         public SqlServerMangaDataLayer(MangaDbContext context)

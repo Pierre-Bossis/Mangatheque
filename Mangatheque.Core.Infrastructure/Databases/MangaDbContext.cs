@@ -21,13 +21,9 @@ namespace Mangatheque.Core.Infrastructure.Databases
         }
         #endregion
 
-
-
-
-
-
-
-
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new EntityConfigurations.MangaEntityTypeConfiguration());
+        }
     }
 }
