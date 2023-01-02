@@ -10,24 +10,30 @@
         return Image;
     }
 }
+@if (@TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success">
+        <i>@TempData["AlertMessage"]</i>
+    </div>
+}
 <h1>Liste des mangas</h1>
 <div class="fashion_section_2">
     <div class="row" style="  display: flex;
   flex-wrap: wrap;">
         @foreach (var item in Model.Mangas)
         {
-                <div class="col-lg-3 margin-MangaList">
-                    <a asp-page="MangaList" asp-route-nom="@item.Nom">
+            <div class="col-lg-3 margin-MangaList">
+                <a asp-page="MangaList" asp-route-nom="@item.Nom">
                     <div class="box_main content-mangaList">
                         <h1>@item.Nom</h1>
-                            <!--Auteur : @item.Auteur<br />-->
-                            <!--Genre : @item.Genre-->
+                        <!--Auteur : @item.Auteur<br />-->
+                        <!--Genre : @item.Genre-->
                         <br />
-                        <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid" style="max-height:300px;" ><br /><br />
-                            <!--Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />-->
+                        <img src="@pictureAdapter(@item.Couverture)" alt="" class="img-fluid" style="max-height:300px;"><br /><br />
+                        <!--Date de publication : @item.DatePublication.ToString("dd MMM yyyy")<br />-->
                     </div>
-                    </a>
-                </div>
+                </a>
+            </div>
         }
     </div>
 </div>

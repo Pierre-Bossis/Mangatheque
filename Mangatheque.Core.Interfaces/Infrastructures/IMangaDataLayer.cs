@@ -34,5 +34,12 @@ namespace Mangatheque.Core.Interfaces.Infrastructures
         /// Permet l'ajout d'un nouveau Manga en base de donnée.
         /// </summary>
         void AddOne(Manga manga);
+
+        /// <summary>
+        /// Appelle la base pour supprimer un Manga.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        void Delete(int Id);
     }
 }

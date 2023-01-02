@@ -29,5 +29,12 @@ namespace Mangatheque.Core.Interfaces.Repositories
         /// </summary>
         /// <param name="manga"></param>
         void Save(Manga manga);
+
+        /// <summary>
+        /// Supprime un Manga
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        void Delete(int Id);
     }
 }

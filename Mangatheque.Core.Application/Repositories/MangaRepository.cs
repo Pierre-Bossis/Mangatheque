@@ -21,6 +21,7 @@ namespace Mangatheque.Core.Application.Repositories
             this.DataLayer = Datalayer;
         }
         #endregion
+
         #region public methods
         public List<Manga> GetAll(string nom)
         {
@@ -50,6 +51,11 @@ namespace Mangatheque.Core.Application.Repositories
         public void Save(Manga manga)
         {
             this.DataLayer.AddOne(manga);
+        }
+
+        public void Delete(int Id)
+        {
+            this.DataLayer.Delete(Id);
         }
         #endregion
     }

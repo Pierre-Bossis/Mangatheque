@@ -36,6 +36,7 @@ namespace Mangatheque.Web.UI.Pages
 
                 this.ModelState.Clear();
 
+                TempData["AlertMessage"] = "Le Manga à bien été ajouté.";
                 result = this.RedirectToPage("/AllT1MangaList");
             }
             return result;

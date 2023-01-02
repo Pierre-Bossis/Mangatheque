@@ -53,6 +53,17 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
             return this.context?.Mangas.Include(item=>item.stock)
                     .First(item => item.Id == Id);
         }
+
+        public void Delete(int Id)
+        {
+            this.context.Mangas.Where(x => x.Id == Id).ExecuteDelete();
+            this.context?.SaveChanges();
+            /*
+            var entry = this.context?.Entry(Id);
+            entry.State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            this.context?.SaveChanges();*/
+
+        }
         #endregion
     }
 }
