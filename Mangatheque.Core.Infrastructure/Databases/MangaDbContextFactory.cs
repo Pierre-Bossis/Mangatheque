@@ -14,7 +14,7 @@ namespace Mangatheque.Core.Infrastructure.Databases
         {
             var optionsBuilder = new DbContextOptionsBuilder<MangaDbContext>();
 
-            optionsBuilder.UseSqlServer("Server=DESKTOP-J2KFRML;Database=Mangatheque;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-J2KFRML;Database=Mangatheque;Trusted_Connection=True;TrustServerCertificate=true;");
 
             return new MangaDbContext(optionsBuilder.Options);
         }

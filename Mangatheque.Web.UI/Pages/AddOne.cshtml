@@ -7,11 +7,11 @@
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="nom">Nom</label>
-        <input placeholder="Nom" required="" class="form-control" id="nom" asp-for="manga.Nom" />
+        <input placeholder="Nom" class="form-control" id="nom" asp-for="manga.Nom" required />
         <label for="numero">Numero</label>
-        <input placeholder="Numero" class="form-control" id="numero" asp-for="manga.Numero" />
+        <input placeholder="Numero" class="form-control" id="numero" asp-for="manga.Numero" required />
         <label for="auteur">Auteur</label>
-        <input placeholder="Auteur" class="form-control" id="auteur" asp-for="manga.Auteur" />
+        <input placeholder="Auteur" class="form-control" id="auteur" asp-for="manga.Auteur" required/>
         <label for="genre">Genre</label>
         <select class="form-control" id="genre" asp-for="manga.Genre">
             <option>Seinen</option>
@@ -23,11 +23,11 @@
             <option>Slice of life</option>
         </select>
         <label for="datepub">Date de publication</label>
-        <input class="form-control" id="datepub" asp-for="manga.DatePublication" />
+        <input class="form-control" id="datepub" asp-for="manga.DatePublication" required />
     </div>
     <div class="form-group">
         <label for="file">Couverture</label>
-        <input class="form-control form-control-file" id="file" type="file" asp-for="myFile" />
+        <input class="form-control form-control-file" id="file" type="file" asp-for="myFile" required />
         <br />
     </div>
     <button class="btn btn-secondary" type="submit">Créer</button>

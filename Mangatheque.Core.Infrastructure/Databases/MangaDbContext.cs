@@ -24,6 +24,7 @@ namespace Mangatheque.Core.Infrastructure.Databases
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EntityConfigurations.MangaEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new EntityConfigurations.StockEntityTypeConfiguration());
         }
     }
 }
