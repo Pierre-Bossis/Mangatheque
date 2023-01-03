@@ -57,6 +57,11 @@ namespace Mangatheque.Core.Application.Repositories
         {
             this.DataLayer.Delete(Id);
         }
+
+        public void Update(Manga Manga)
+        {
+            this.DataLayer.Update(Manga);
+        }
         #endregion
     }
 }

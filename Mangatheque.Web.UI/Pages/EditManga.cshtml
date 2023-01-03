@@ -1,0 +1,36 @@
+﻿@page
+@model Mangatheque.Web.UI.Pages.EditMangaModel
+@{
+}
+<h1>Editer un manga</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="hidden" asp-for="manga.Id" />
+        <label for="nom">Nom</label>
+        <input placeholder="Nom" class="form-control" id="nom" asp-for="manga.Nom" required />
+        <label for="numero">Numero</label>
+        <input placeholder="Numero" class="form-control" id="numero" asp-for="manga.Numero" required />
+        <label for="auteur">Auteur</label>
+        <input placeholder="Auteur" class="form-control" id="auteur" asp-for="manga.Auteur" required />
+        <label for="genre">Genre</label>
+        <select class="form-control" id="genre" asp-for="manga.Genre" required>
+            <option>Seinen</option>
+            <option>Horreur</option>
+            <option>Fantastique</option>
+            <option>Shonen</option>
+            <option>Shojo</option>
+            <option>School life</option>
+            <option>Slice of life</option>
+        </select>
+        <label for="stock">statut du stock</label>
+        <select class="form-control" id="stock" asp-for="manga.stock" required>
+            <option>{Stock { Id = 1, Label = Disponible }}</option>
+            <option>{Stock { Id = 0, Label = Bientôt disponible }}</option>
+            <option>{Stock { Id = -1, Label = Indisponible }}</option>
+            </select>
+        <label for="datepub">Date de publication</label>
+        <input class="form-control" id="datepub" asp-for="manga.DatePublication" required />
+    </div>
+    <button class="btn btn-secondary" type="submit">Editer</button>
+</form>

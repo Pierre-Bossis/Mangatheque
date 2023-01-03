@@ -19,7 +19,6 @@ namespace Mangatheque.Core.Models
         public string Genre { get; set; }
 
         public DateTime DatePublication { get; set; }
-
         public byte[]? Couverture { get; set; }
 
         public Stock stock { get; set; } = Stock.Valid;

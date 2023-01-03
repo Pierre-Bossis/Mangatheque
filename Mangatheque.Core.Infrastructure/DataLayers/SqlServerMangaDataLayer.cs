@@ -64,6 +64,21 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
             this.context?.SaveChanges();*/
 
         }
+
+        public void Update(Manga manga)
+        {
+            var entity = context.Mangas.Find(manga.Id);
+
+            entity.Nom = manga.Nom;
+            entity.Auteur = manga.Auteur;
+            entity.Numero = manga.Numero;
+            entity.DatePublication = manga.DatePublication;
+            entity.Genre = manga.Genre;
+            entity.stock = manga.stock;
+            
+            this.context?.Mangas.Update(entity);
+            this.context?.SaveChanges();
+        }
         #endregion
     }
 }

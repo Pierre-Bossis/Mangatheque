@@ -41,5 +41,12 @@ namespace Mangatheque.Core.Interfaces.Infrastructures
         /// <param name="Id"></param>
         /// <returns></returns>
         void Delete(int Id);
+
+        /// <summary>
+        /// Appelle la base pour editer un Manga.
+        /// </summary>
+        /// <param name="manga"></param>
+        /// <returns></returns>
+        void Update(Manga manga);
     }
 }
