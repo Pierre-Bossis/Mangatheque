@@ -1,10 +1,12 @@
 using Mangatheque.Core.Interfaces.Repositories;
 using Mangatheque.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Mangatheque.Web.UI.Pages
 {
+    [Authorize(Roles = "Administrator")]
     public class EditMangaModel : PageModel
     {
         #region Fields

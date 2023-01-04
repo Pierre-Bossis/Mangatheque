@@ -34,7 +34,7 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
 
         public List<Manga> GetList(string nom)
         {
-            var Query = from item in this.context?.Mangas.Include(item => item.stock).Where(c => c.Nom == nom)
+            var Query = from item in this.context?.Mangas.Include(item => item.stock).Where(c => c.Nom == nom).OrderBy(c=>c.Numero)
                         select item;
 
             return Query.ToList();
@@ -74,8 +74,8 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
             entity.Numero = manga.Numero;
             entity.DatePublication = manga.DatePublication;
             entity.Genre = manga.Genre;
-            entity.stock = manga.stock;
-            
+            //entity.stock = manga.stock;
+
             this.context?.Mangas.Update(entity);
             this.context?.SaveChanges();
         }

@@ -1,11 +1,13 @@
 using Mangatheque.Core.Interfaces.Repositories;
 using Mangatheque.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 
 namespace Mangatheque.Web.UI.Pages
 {
+    [Authorize(Roles = "Administrator")]
     public class DeleteMangaModel : PageModel
     {
         #region Fields
