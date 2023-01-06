@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Mangatheque.Web.UI.props" />
+</Project>

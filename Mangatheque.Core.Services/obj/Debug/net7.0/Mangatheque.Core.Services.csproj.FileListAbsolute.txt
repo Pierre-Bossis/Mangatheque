@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\bin\Debug\net7.0\Mangatheque.Core.Services.deps.json
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\bin\Debug\net7.0\Mangatheque.Core.Services.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\bin\Debug\net7.0\Mangatheque.Core.Services.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.AssemblyInfo.cs
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\refint\Mangatheque.Core.Services.dll
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\Mangatheque.Core.Services.pdb
+C:\Users\user\source\repos\Mangatheque\Mangatheque.Core.Services\obj\Debug\net7.0\ref\Mangatheque.Core.Services.dll
