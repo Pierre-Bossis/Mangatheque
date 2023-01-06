@@ -87,6 +87,64 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Auteur")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("Couverture")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<DateTime>("DatePublication")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MangathequeWebUIUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Nom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("stockId")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MangathequeWebUIUserId");
+
+                    b.HasIndex("stockId");
+
+                    b.ToTable("Manga");
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Models.Stock", b =>
+                {
+                    b.Property<decimal>("Id")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stock");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -220,6 +278,21 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
+                {
+                    b.HasOne("Mangatheque.Core.Infrastructure.Databases.MangathequeWebUIUser", null)
+                        .WithMany("Manga")
+                        .HasForeignKey("MangathequeWebUIUserId");
+
+                    b.HasOne("Mangatheque.Core.Models.Stock", "stock")
+                        .WithMany()
+                        .HasForeignKey("stockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("stock");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -269,6 +342,11 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Infrastructure.Databases.MangathequeWebUIUser", b =>
+                {
+                    b.Navigation("Manga");
                 });
 #pragma warning restore 612, 618
         }

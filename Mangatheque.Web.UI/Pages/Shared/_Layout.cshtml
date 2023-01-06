@@ -47,14 +47,18 @@
                         <div class="custom_menu">
                             <ul>
                                 <li><a asp-page="/index">Home</a></li>
-                                <li><a asp-page="/AllT1MangaList">Manga list</a></li>
-                                <li><a asp-page="/privacy">Privacy</a></li>
+                                <li><a asp-page="/AllT1MangaList">Liste des mangas</a></li>
+                                <!--<li><a asp-page="/privacy">Privacy</a></li>-->
                                 <li><a asp-page="/contact">Contact</a></li>
                                 @if (Context.User.Identity.IsAuthenticated && Context.User.IsInRole("Administrator"))
                                 { 
-                                    <li><a asp-page="/AddOne">Add</a></li>
+                                    <li><a asp-page="/AddOne">Ajouter</a></li>
                                 }
-                                <li><a href="#">Other Section</a></li>
+                                @if (Context.User.Identity.IsAuthenticated && Context.User.IsInRole("Member"))
+                                {
+                                    <li><a asp-page="/ReadList">Ma liste de lecture</a></li>
+                                }
+                                <!--<li><a href="#">Other Section</a></li>-->
                             </ul>
                              <partial name="_LoginPartial" />
                         </div>
