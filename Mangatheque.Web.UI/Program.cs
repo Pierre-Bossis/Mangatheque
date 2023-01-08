@@ -26,7 +26,7 @@ builder.Services.AddDbContext<MangaDbContext>(options =>
 
 
 
-builder.Services.AddIdentity<MangathequeWebUIUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddIdentity<MangathequeUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoleManager<RoleManager<IdentityRole>>()
     .AddDefaultUI()
     .AddDefaultTokenProviders()
@@ -59,8 +59,7 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseRouting();
-app.UseAuthentication();;
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

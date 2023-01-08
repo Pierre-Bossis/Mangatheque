@@ -15,12 +15,12 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class IndexModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
 
         public IndexModel(
-            UserManager<MangathequeWebUIUser> userManager,
-            SignInManager<MangathequeWebUIUser> signInManager)
+            UserManager<MangathequeUser> userManager,
+            SignInManager<MangathequeUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -61,7 +61,7 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
-        private async Task LoadAsync(MangathequeWebUIUser user)
+        private async Task LoadAsync(MangathequeUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);

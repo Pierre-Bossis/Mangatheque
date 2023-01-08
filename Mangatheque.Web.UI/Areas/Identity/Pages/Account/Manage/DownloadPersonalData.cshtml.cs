@@ -18,11 +18,11 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
 
         public DownloadPersonalDataModel(
-            UserManager<MangathequeWebUIUser> userManager,
+            UserManager<MangathequeUser> userManager,
             ILogger<DownloadPersonalDataModel> logger)
         {
             _userManager = userManager;
@@ -46,7 +46,7 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 
             // Only include personal data for download
             var personalData = new Dictionary<string, string>();
-            var personalDataProps = typeof(MangathequeWebUIUser).GetProperties().Where(
+            var personalDataProps = typeof(MangathequeUser).GetProperties().Where(
                             prop => Attribute.IsDefined(prop, typeof(PersonalDataAttribute)));
             foreach (var p in personalDataProps)
             {

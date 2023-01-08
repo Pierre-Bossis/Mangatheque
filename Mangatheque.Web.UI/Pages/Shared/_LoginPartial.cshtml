@@ -1,8 +1,8 @@
 ﻿@using Mangatheque.Core.Infrastructure.Databases;
 @using Microsoft.AspNetCore.Identity
 
-@inject SignInManager<MangathequeWebUIUser> SignInManager
-@inject UserManager<MangathequeWebUIUser> UserManager
+@inject SignInManager<MangathequeUser> SignInManager
+@inject UserManager<MangathequeUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

@@ -19,10 +19,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class ForgotPasswordModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly IEmailSender _emailSender;
 
-        public ForgotPasswordModel(UserManager<MangathequeWebUIUser> userManager, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<MangathequeUser> userManager, IEmailSender emailSender)
         {
             _userManager = userManager;
             _emailSender = emailSender;

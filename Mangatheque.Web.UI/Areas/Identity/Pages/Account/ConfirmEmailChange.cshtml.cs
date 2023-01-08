@@ -16,10 +16,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class ConfirmEmailChangeModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
 
-        public ConfirmEmailChangeModel(UserManager<MangathequeWebUIUser> userManager, SignInManager<MangathequeWebUIUser> signInManager)
+        public ConfirmEmailChangeModel(UserManager<MangathequeUser> userManager, SignInManager<MangathequeUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

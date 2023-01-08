@@ -18,13 +18,13 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class EmailModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public EmailModel(
-            UserManager<MangathequeWebUIUser> userManager,
-            SignInManager<MangathequeWebUIUser> signInManager,
+            UserManager<MangathequeUser> userManager,
+            SignInManager<MangathequeUser> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -74,7 +74,7 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
             public string NewEmail { get; set; }
         }
 
-        private async Task LoadAsync(MangathequeWebUIUser user)
+        private async Task LoadAsync(MangathequeUser user)
         {
             var email = await _userManager.GetEmailAsync(user);
             Email = email;

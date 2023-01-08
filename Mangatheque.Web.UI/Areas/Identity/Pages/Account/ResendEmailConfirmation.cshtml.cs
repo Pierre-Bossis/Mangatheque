@@ -20,10 +20,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResendEmailConfirmationModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly IEmailSender _emailSender;
 
-        public ResendEmailConfirmationModel(UserManager<MangathequeWebUIUser> userManager, IEmailSender emailSender)
+        public ResendEmailConfirmationModel(UserManager<MangathequeUser> userManager, IEmailSender emailSender)
         {
             _userManager = userManager;
             _emailSender = emailSender;

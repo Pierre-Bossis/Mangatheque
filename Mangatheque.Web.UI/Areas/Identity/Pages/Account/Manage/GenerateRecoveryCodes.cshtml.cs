@@ -15,11 +15,11 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class GenerateRecoveryCodesModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly ILogger<GenerateRecoveryCodesModel> _logger;
 
         public GenerateRecoveryCodesModel(
-            UserManager<MangathequeWebUIUser> userManager,
+            UserManager<MangathequeUser> userManager,
             ILogger<GenerateRecoveryCodesModel> logger)
         {
             _userManager = userManager;

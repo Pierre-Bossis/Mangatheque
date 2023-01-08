@@ -17,7 +17,7 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -109,9 +109,6 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MangathequeWebUIUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Nom")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -124,11 +121,24 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MangathequeWebUIUserId");
-
                     b.HasIndex("stockId");
 
-                    b.ToTable("Manga");
+                    b.ToTable("Mangas");
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("MangaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "MangaId");
+
+                    b.HasIndex("MangaId");
+
+                    b.ToTable("MangaUsers");
                 });
 
             modelBuilder.Entity("Mangatheque.Core.Models.Stock", b =>
@@ -143,6 +153,58 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                     b.HasKey("Id");
 
                     b.ToTable("Stock");
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -280,10 +342,6 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
 
             modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
                 {
-                    b.HasOne("Mangatheque.Core.Infrastructure.Databases.MangathequeWebUIUser", null)
-                        .WithMany("Manga")
-                        .HasForeignKey("MangathequeWebUIUserId");
-
                     b.HasOne("Mangatheque.Core.Models.Stock", "stock")
                         .WithMany()
                         .HasForeignKey("stockId")
@@ -291,6 +349,25 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .IsRequired();
 
                     b.Navigation("stock");
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
+                {
+                    b.HasOne("Mangatheque.Core.Models.Manga", "Manga")
+                        .WithMany("MangasUser")
+                        .HasForeignKey("MangaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Mangatheque.Core.Models.User", "User")
+                        .WithMany("MangasUser")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manga");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -344,9 +421,14 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Infrastructure.Databases.MangathequeWebUIUser", b =>
+            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
                 {
-                    b.Navigation("Manga");
+                    b.Navigation("MangasUser");
+                });
+
+            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
+                {
+                    b.Navigation("MangasUser");
                 });
 #pragma warning restore 612, 618
         }

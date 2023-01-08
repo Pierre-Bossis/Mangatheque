@@ -24,17 +24,17 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly IUserStore<MangathequeWebUIUser> _userStore;
-        private readonly IUserEmailStore<MangathequeWebUIUser> _emailStore;
+        private readonly SignInManager<MangathequeUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly IUserStore<MangathequeUser> _userStore;
+        private readonly IUserEmailStore<MangathequeUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<MangathequeWebUIUser> userManager,
-            IUserStore<MangathequeWebUIUser> userStore,
-            SignInManager<MangathequeWebUIUser> signInManager,
+            UserManager<MangathequeUser> userManager,
+            IUserStore<MangathequeUser> userStore,
+            SignInManager<MangathequeUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -155,27 +155,27 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private MangathequeWebUIUser CreateUser()
+        private MangathequeUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<MangathequeWebUIUser>();
+                return Activator.CreateInstance<MangathequeUser>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(MangathequeWebUIUser)}'. " +
-                    $"Ensure that '{nameof(MangathequeWebUIUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(MangathequeUser)}'. " +
+                    $"Ensure that '{nameof(MangathequeUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<MangathequeWebUIUser> GetEmailStore()
+        private IUserEmailStore<MangathequeUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<MangathequeWebUIUser>)_userStore;
+            return (IUserEmailStore<MangathequeUser>)_userStore;
         }
     }
 }

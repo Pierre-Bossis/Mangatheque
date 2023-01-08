@@ -15,13 +15,13 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class ChangePasswordModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
 
         public ChangePasswordModel(
-            UserManager<MangathequeWebUIUser> userManager,
-            SignInManager<MangathequeWebUIUser> signInManager,
+            UserManager<MangathequeUser> userManager,
+            SignInManager<MangathequeUser> signInManager,
             ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;

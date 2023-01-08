@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Identity;
 namespace Mangatheque.Core.Infrastructure.Databases;
 
 // Add profile data for application users by adding properties to the MangathequeWebUIUser class
-public class MangathequeWebUIUser : IdentityUser
+public class MangathequeUser : IdentityUser
 {
-    public List<Manga>? Manga { get; set; }
+    //public virtual ICollection<MangaUser> MesMangas { get; set; }
 }
 

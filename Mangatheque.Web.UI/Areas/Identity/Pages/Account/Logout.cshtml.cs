@@ -15,10 +15,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
-        public LogoutModel(SignInManager<MangathequeWebUIUser> signInManager, ILogger<LogoutModel> logger)
+        public LogoutModel(SignInManager<MangathequeUser> signInManager, ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

@@ -20,10 +20,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<MangathequeWebUIUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<MangathequeUser> signInManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

@@ -12,11 +12,11 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class PersonalDataModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<MangathequeWebUIUser> userManager,
+            UserManager<MangathequeUser> userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;

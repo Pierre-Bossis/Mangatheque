@@ -14,12 +14,12 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class TwoFactorAuthenticationModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
 
         public TwoFactorAuthenticationModel(
-            UserManager<MangathequeWebUIUser> userManager, SignInManager<MangathequeWebUIUser> signInManager, ILogger<TwoFactorAuthenticationModel> logger)
+            UserManager<MangathequeUser> userManager, SignInManager<MangathequeUser> signInManager, ILogger<TwoFactorAuthenticationModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;

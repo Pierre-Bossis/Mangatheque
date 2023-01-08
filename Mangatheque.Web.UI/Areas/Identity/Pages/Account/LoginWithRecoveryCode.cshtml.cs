@@ -15,13 +15,13 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class LoginWithRecoveryCodeModel : PageModel
     {
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly ILogger<LoginWithRecoveryCodeModel> _logger;
 
         public LoginWithRecoveryCodeModel(
-            SignInManager<MangathequeWebUIUser> signInManager,
-            UserManager<MangathequeWebUIUser> userManager,
+            SignInManager<MangathequeUser> signInManager,
+            UserManager<MangathequeUser> userManager,
             ILogger<LoginWithRecoveryCodeModel> logger)
         {
             _signInManager = signInManager;

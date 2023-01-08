@@ -1,6 +1,6 @@
 ﻿@using Mangatheque.Core.Infrastructure.Databases;
 
-@inject SignInManager<MangathequeWebUIUser> SignInManager
+@inject SignInManager<MangathequeUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

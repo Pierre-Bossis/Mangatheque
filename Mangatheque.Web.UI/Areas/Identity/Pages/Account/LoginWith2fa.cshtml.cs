@@ -17,13 +17,13 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class LoginWith2faModel : PageModel
     {
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly ILogger<LoginWith2faModel> _logger;
 
         public LoginWith2faModel(
-            SignInManager<MangathequeWebUIUser> signInManager,
-            UserManager<MangathequeWebUIUser> userManager,
+            SignInManager<MangathequeUser> signInManager,
+            UserManager<MangathequeUser> userManager,
             ILogger<LoginWith2faModel> logger)
         {
             _signInManager = signInManager;

@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\images\\neklesh-img.png"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\Mangatheque\\Mangatheque.Web.UI\\wwwroot\\images\\sad.png",
+      "PackagePath": "staticwebassets\\images\\sad.png"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\Mangatheque\\Mangatheque.Web.UI\\wwwroot\\images\\search-icon.png",
       "PackagePath": "staticwebassets\\images\\search-icon.png"
     },

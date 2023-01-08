@@ -17,9 +17,9 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
 
-        public ConfirmEmailModel(UserManager<MangathequeWebUIUser> userManager)
+        public ConfirmEmailModel(UserManager<MangathequeUser> userManager)
         {
             _userManager = userManager;
         }

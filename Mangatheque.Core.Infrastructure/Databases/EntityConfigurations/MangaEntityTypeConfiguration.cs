@@ -13,6 +13,7 @@ namespace Mangatheque.Core.Infrastructure.Databases.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Manga> builder)
         {
+            builder.ToTable("Mangas");
             builder.Property(item => item.Nom).IsRequired();
             builder.Property(item=>item.Numero).IsRequired();
             builder.Property(item=>item.Auteur).IsRequired();

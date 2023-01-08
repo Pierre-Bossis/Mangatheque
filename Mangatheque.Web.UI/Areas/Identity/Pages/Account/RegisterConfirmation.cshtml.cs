@@ -18,10 +18,10 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterConfirmationModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
         private readonly IEmailSender _sender;
 
-        public RegisterConfirmationModel(UserManager<MangathequeWebUIUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<MangathequeUser> userManager, IEmailSender sender)
         {
             _userManager = userManager;
             _sender = sender;

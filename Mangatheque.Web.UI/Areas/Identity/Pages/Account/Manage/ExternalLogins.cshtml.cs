@@ -17,14 +17,14 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
-        private readonly SignInManager<MangathequeWebUIUser> _signInManager;
-        private readonly IUserStore<MangathequeWebUIUser> _userStore;
+        private readonly UserManager<MangathequeUser> _userManager;
+        private readonly SignInManager<MangathequeUser> _signInManager;
+        private readonly IUserStore<MangathequeUser> _userStore;
 
         public ExternalLoginsModel(
-            UserManager<MangathequeWebUIUser> userManager,
-            SignInManager<MangathequeWebUIUser> signInManager,
-            IUserStore<MangathequeWebUIUser> userStore)
+            UserManager<MangathequeUser> userManager,
+            SignInManager<MangathequeUser> signInManager,
+            IUserStore<MangathequeUser> userStore)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -70,7 +70,7 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account.Manage
                 .ToList();
 
             string passwordHash = null;
-            if (_userStore is IUserPasswordStore<MangathequeWebUIUser> userPasswordStore)
+            if (_userStore is IUserPasswordStore<MangathequeUser> userPasswordStore)
             {
                 passwordHash = await userPasswordStore.GetPasswordHashAsync(user, HttpContext.RequestAborted);
             }

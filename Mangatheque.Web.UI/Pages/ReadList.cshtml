@@ -1,5 +1,17 @@
 ﻿@page
 @model Mangatheque.Web.UI.Pages.ReadListModel
+@using Mangatheque.Core.Infrastructure.Databases;
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<MangathequeUser> UserManager
 @{
+    var user = await UserManager.GetUserAsync(User);
 }
+
+
+
 <h1>Mangas à lire</h1>
+
+@if(user != null)
+{
+    <h2>@user.Email @user.Id</h2>
+}

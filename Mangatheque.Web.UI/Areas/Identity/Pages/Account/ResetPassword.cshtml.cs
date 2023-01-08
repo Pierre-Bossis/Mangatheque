@@ -17,9 +17,9 @@ namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<MangathequeWebUIUser> _userManager;
+        private readonly UserManager<MangathequeUser> _userManager;
 
-        public ResetPasswordModel(UserManager<MangathequeWebUIUser> userManager)
+        public ResetPasswordModel(UserManager<MangathequeUser> userManager)
         {
             _userManager = userManager;
         }
