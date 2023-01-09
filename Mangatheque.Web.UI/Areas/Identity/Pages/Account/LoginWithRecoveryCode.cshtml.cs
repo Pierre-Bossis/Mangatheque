@@ -5,12 +5,12 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Mangatheque.Core.Infrastructure.Databases;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Mangatheque.Core.Models;
 namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {
     public class LoginWithRecoveryCodeModel : PageModel

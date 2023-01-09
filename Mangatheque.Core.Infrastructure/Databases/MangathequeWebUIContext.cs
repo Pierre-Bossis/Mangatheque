@@ -9,22 +9,20 @@ namespace Mangatheque.Core.Infrastructure.Databases;
 
 public class MangathequeWebUIContext : IdentityDbContext<MangathequeUser, IdentityRole, string>
 {
+    #region Properties
+    //public override DbSet<MangathequeUser> Users { get; set; }
+    //public DbSet<Manga> Mangas { get; set; }
+    //public DbSet<Manga_MangathequeUser> manga_MangathequeUser { get; set; }
+    #endregion
+
     public MangathequeWebUIContext(DbContextOptions<MangathequeWebUIContext> options)
         : base(options)
     {
     }
 
-    //public DbSet<Manga> Mangas { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
-        /*builder.Entity<User>()
-       .HasMany(u => u.MangasUser)
-       .WithMany(m => m.User)
-       .UsingEntity<UserManga>()
-       .HasForeignKey(um => um.UsersId)
-       .HasPrincipalKey(um => um.MangaId);*/
 
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.

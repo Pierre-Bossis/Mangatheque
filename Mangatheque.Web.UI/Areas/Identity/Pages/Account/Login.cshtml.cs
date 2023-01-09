@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Mangatheque.Core.Infrastructure.Databases;
+using Mangatheque.Core.Models;
 
 namespace Mangatheque.Web.UI.Areas.Identity.Pages.Account
 {

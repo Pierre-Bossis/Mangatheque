@@ -62,36 +62,25 @@ namespace Mangatheque.Core.Infrastructure.Migrations
                     b.ToTable("Mangas", (string)null);
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
+            modelBuilder.Entity("Mangatheque.Core.Models.Manga_MangathequeUser", b =>
                 {
-                    b.Property<string>("UserId")
+                    b.Property<string>("MangathequeUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("MangaId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId", "MangaId");
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("MangathequeUserId", "MangaId");
 
                     b.HasIndex("MangaId");
 
-                    b.ToTable("MangaUsers");
+                    b.ToTable("manga_MangathequeUser");
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Models.Stock", b =>
-                {
-                    b.Property<decimal>("Id")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Label")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Stock");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
+            modelBuilder.Entity("Mangatheque.Core.Models.MangathequeUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -143,6 +132,20 @@ namespace Mangatheque.Core.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Mangatheque.Core.Models.Stock", b =>
+                {
+                    b.Property<decimal>("Id")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stock");
+                });
+
             modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
                 {
                     b.HasOne("Mangatheque.Core.Models.Stock", "stock")
@@ -154,33 +157,33 @@ namespace Mangatheque.Core.Infrastructure.Migrations
                     b.Navigation("stock");
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
+            modelBuilder.Entity("Mangatheque.Core.Models.Manga_MangathequeUser", b =>
                 {
                     b.HasOne("Mangatheque.Core.Models.Manga", "Manga")
-                        .WithMany("MangasUser")
+                        .WithMany("UserMangas")
                         .HasForeignKey("MangaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Mangatheque.Core.Models.User", "User")
-                        .WithMany("MangasUser")
-                        .HasForeignKey("UserId")
+                    b.HasOne("Mangatheque.Core.Models.MangathequeUser", "MangathequeUser")
+                        .WithMany("UserMangas")
+                        .HasForeignKey("MangathequeUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Manga");
 
-                    b.Navigation("User");
+                    b.Navigation("MangathequeUser");
                 });
 
             modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
                 {
-                    b.Navigation("MangasUser");
+                    b.Navigation("UserMangas");
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
+            modelBuilder.Entity("Mangatheque.Core.Models.MangathequeUser", b =>
                 {
-                    b.Navigation("MangasUser");
+                    b.Navigation("UserMangas");
                 });
 #pragma warning restore 612, 618
         }

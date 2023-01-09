@@ -24,7 +24,7 @@ namespace Mangatheque.Core.Models
 
         public Stock stock { get; set; } = Stock.Valid;
 
-        public List<MangathequeUser>? Users { get; set; }
+        public virtual List<Manga_MangathequeUser>? UserMangas { get; set; }
 
     }
 }

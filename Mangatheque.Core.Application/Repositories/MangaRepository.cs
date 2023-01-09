@@ -37,6 +37,13 @@ namespace Mangatheque.Core.Application.Repositories
             return list;
         }
 
+        public List<Manga> GetReadList(string id)
+        {
+            List<Manga> list = this.DataLayer.GetReadList(id);
+
+            return list;
+        }
+
         public Manga GetOne(int Id)
         {
             Manga manga = this.DataLayer.GetOne(Id);
@@ -53,9 +60,19 @@ namespace Mangatheque.Core.Application.Repositories
             this.DataLayer.AddOne(manga);
         }
 
+        public void AddToReadList(int id, string idstring)
+        {
+            this.DataLayer.AddToReadList(id,idstring);
+        }
+
         public void Delete(int Id)
         {
             this.DataLayer.Delete(Id);
+        }
+
+        public void DeleteFromReadList(int id, string idstring)
+        {
+            this.DataLayer.DeleteFromReadList(id,idstring);
         }
 
         public void Update(Manga Manga)

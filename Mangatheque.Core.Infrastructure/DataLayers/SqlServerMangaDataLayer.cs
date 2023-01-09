@@ -48,6 +48,40 @@ namespace Mangatheque.Core.Infrastructure.DataLayers
             return Query.ToList();
         }
 
+        public List<Manga>? GetReadList(string id)
+        {
+            return this.context?.Mangas
+                .Include(c => c.UserMangas)
+                .ThenInclude(ca => ca.MangathequeUser)
+                .Where(c => c.UserMangas.Any(ca => ca.MangathequeUserId == id))
+                .ToList();
+        }
+
+        public void AddToReadList(int id,string idstring)
+        {
+            var user = this.context?.Users
+            .Include(u => u.UserMangas)
+            .ThenInclude(um => um.Manga)
+            .SingleOrDefault(u => u.Id == idstring);
+
+            user.UserMangas.Add(new Manga_MangathequeUser { MangathequeUserId = idstring, MangaId = id });
+
+
+            context.SaveChanges();
+        }
+
+        public void DeleteFromReadList(int id, string idstring)
+        {
+            var user = this.context?.Users
+            .Include(u => u.UserMangas)
+            .ThenInclude(um => um.Manga)
+            .SingleOrDefault(u => u.Id == idstring);
+            var manga = this.context?.Mangas
+            .SingleOrDefault(m => m.Id == id);
+            user.UserMangas.Remove(user.UserMangas.SingleOrDefault(um => um.MangaId == id));
+            this.context?.SaveChanges();
+        }
+
         public Manga? GetOne(int Id)
         {
             return this.context?.Mangas.Include(item=>item.stock)

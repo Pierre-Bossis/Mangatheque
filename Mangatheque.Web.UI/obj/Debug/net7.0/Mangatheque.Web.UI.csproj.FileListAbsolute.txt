@@ -276,7 +276,6 @@ C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net7.0\Manga
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net7.0\Mangatheque.Core.Interfaces.pdb
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net7.0\Mangatheque.Core.Models.pdb
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\bin\Debug\net7.0\Mangatheque.Core.Services.pdb
-C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\obj\Debug\net7.0\Mangatheque.Web.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\obj\Debug\net7.0\staticwebassets\msbuild.Mangatheque.Web.UI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\obj\Debug\net7.0\staticwebassets\msbuild.build.Mangatheque.Web.UI.props
 C:\Users\user\source\repos\Mangatheque\Mangatheque.Web.UI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mangatheque.Web.UI.props

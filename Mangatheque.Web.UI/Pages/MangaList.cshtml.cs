@@ -2,6 +2,7 @@ using Mangatheque.Core.Interfaces.Repositories;
 using Mangatheque.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
 
 namespace Mangatheque.Web.UI.Pages
 {
@@ -9,11 +10,13 @@ namespace Mangatheque.Web.UI.Pages
     {
         #region Fields
         private readonly IMangaRepository repository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         #endregion
         #region Constructors
-        public MangaListModel(IMangaRepository repository)
+        public MangaListModel(IMangaRepository repository, IHttpContextAccessor httpContextAccessor)
         {
             this.repository = repository;
+            this._httpContextAccessor = httpContextAccessor;
         }
         #endregion
         #region Public Methods
@@ -32,6 +35,16 @@ namespace Mangatheque.Web.UI.Pages
             }
             return result;
         }
+
+        public IActionResult OnGetAddToReadList()
+        {
+            var result = this.RedirectToPage("/index");
+
+            this.repository.AddToReadList(monId2, _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            TempData["AlertMessage"] = "Le Manga à bien été ajouté à votre liste.";
+            return result;
+        }
         #endregion
         #region Private Methods
         //private void SetListMangas()
@@ -39,11 +52,15 @@ namespace Mangatheque.Web.UI.Pages
         //    Mangas = repository.GetAll(nom);
         //}
         #endregion
+
         #region Properties
         public List<Manga> Mangas { get; set; } = new List<Manga>();
 
         [BindProperty(SupportsGet = true)]
         public string nom { get; set; }
+
+        [BindProperty(SupportsGet =true)]
+        public int monId2 { get; set; }
         #endregion
     }
 }

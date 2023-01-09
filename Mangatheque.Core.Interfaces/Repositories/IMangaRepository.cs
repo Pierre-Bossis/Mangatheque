@@ -18,6 +18,12 @@ namespace Mangatheque.Core.Interfaces.Repositories
         List<Manga> GetAllT1();
 
         /// <summary>
+        /// Retourne la liste des mangas d'une readlist d'un utilisateur
+        /// </summary>
+        /// <returns></returns>
+        List<Manga> GetReadList(string id);
+
+        /// <summary>
         /// retourne un Manga par son Id.
         /// </summary>
         /// <param name="Id"></param>
@@ -31,11 +37,23 @@ namespace Mangatheque.Core.Interfaces.Repositories
         void Save(Manga manga);
 
         /// <summary>
+        /// Ajoute ou mise à jour d'un manga dans la readlist d'un user
+        /// </summary>
+        /// <param name="manga"></param>
+        void AddToReadList(int id, string idstring);
+
+        /// <summary>
         /// Supprime un Manga
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
         void Delete(int Id);
+
+        /// <summary>
+        /// supprime un manga de la readlist d'un user
+        /// </summary>
+        /// <param name="id"></param>
+        void DeleteFromReadList(int id,  string idstring);
 
         /// <summary>
         /// Edite un Manga

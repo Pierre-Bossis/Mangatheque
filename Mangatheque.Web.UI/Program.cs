@@ -3,6 +3,7 @@ using Mangatheque.Core.Infrastructure.Databases;
 using Mangatheque.Core.Infrastructure.DataLayers;
 using Mangatheque.Core.Interfaces.Infrastructures;
 using Mangatheque.Core.Interfaces.Repositories;
+using Mangatheque.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 //using Mangatheque.Web.UI.Data;

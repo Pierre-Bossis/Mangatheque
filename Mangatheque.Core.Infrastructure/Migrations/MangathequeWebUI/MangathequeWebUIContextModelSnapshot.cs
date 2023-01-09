@@ -17,7 +17,7 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "7.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -85,126 +85,6 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Auteur")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("Couverture")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<DateTime>("DatePublication")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nom")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Numero")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("stockId")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("stockId");
-
-                    b.ToTable("Mangas");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("MangaId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserId", "MangaId");
-
-                    b.HasIndex("MangaId");
-
-                    b.ToTable("MangaUsers");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.Stock", b =>
-                {
-                    b.Property<decimal>("Id")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Label")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Stock");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -340,36 +220,6 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
-                {
-                    b.HasOne("Mangatheque.Core.Models.Stock", "stock")
-                        .WithMany()
-                        .HasForeignKey("stockId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("stock");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.MangasUser", b =>
-                {
-                    b.HasOne("Mangatheque.Core.Models.Manga", "Manga")
-                        .WithMany("MangasUser")
-                        .HasForeignKey("MangaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Mangatheque.Core.Models.User", "User")
-                        .WithMany("MangasUser")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Manga");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -419,16 +269,6 @@ namespace Mangatheque.Core.Infrastructure.Migrations.MangathequeWebUI
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.Manga", b =>
-                {
-                    b.Navigation("MangasUser");
-                });
-
-            modelBuilder.Entity("Mangatheque.Core.Models.User", b =>
-                {
-                    b.Navigation("MangasUser");
                 });
 #pragma warning restore 612, 618
         }
