@@ -10,6 +10,6 @@ namespace Mangatheque.Core.Infrastructure.Databases;
 // Add profile data for application users by adding properties to the MangathequeWebUIUser class
 public class MangathequeUser : IdentityUser
 {
-    //public virtual ICollection<MangaUser> MesMangas { get; set; }
+    public virtual ICollection<MangaUser> MesMangas { get; set; }
 }
 
